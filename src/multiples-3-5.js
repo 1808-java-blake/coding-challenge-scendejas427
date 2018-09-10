@@ -2,7 +2,29 @@
 // Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
 // Note: If the number is a multiple of both 3 and 5, only count it once.
 function solution(number){
-  // TODO: Create the solution
+  let sum=0;
+  let num=number;
+  if(number===0){return 0}
+
+  else if(!number){return -1}
+
+  if(number%5==0){num=number-1}
+
+ for(let i=0;i<=Math.floor(num/5);i++){
+  sum=sum+(i)*5;
+
+ }
+ if(number%3==0){num=number-1}
+
+ for(let i=0;i<=Math.floor(num/3);i++){
+   if( (i) %5!=0){
+  sum=sum+(i)*3;
+ 
+  }
 }
+
+  return sum;
+}
+
 
 module.exports = solution;

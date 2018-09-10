@@ -18,7 +18,28 @@ stick lengths     length of cut     sticks before cut
 - - - - - -         done              done
 */
 function solution(arr){
-  // TODO: Create the solution
-}
+ if(arr==undefined){ return []}
+
+  let ans=[];
+  ans[0]=arr.length;
+
+  for (let j=0;j<=arr.length;j++){
+  let i=0;
+  let short=Math.min(arr)
+  arr.forEach(element => {
+    if(element>short){
+      element=element-short;
+      i++
+    }
+    else if(short===element){
+      element=0;
+    }
+    
+  })
+  ans[j+1]=i;
+  }
+   console.log(ans) 
+ };
+
 
 module.exports = solution;

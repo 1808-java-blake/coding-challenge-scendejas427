@@ -1,5 +1,4 @@
 let solution = require('./multiples-3-5');
-
 describe('Tests for multiples-3-5', () => {
   
   const testCases = [
